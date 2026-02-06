@@ -1,0 +1,9 @@
+node_modules
+.env
+.env.local
+*.log
+.DS_Store
+*.json.key
+service-account*.json
+credentials*.json
+start.sh

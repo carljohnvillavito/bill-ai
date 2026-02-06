@@ -1,0 +1,26 @@
+services:
+  - type: web
+    name: bill-ai-backend
+    env: node
+    plan: free
+    buildCommand: npm install
+    startCommand: npm start
+    envVars:
+      - key: GOOGLE_CLIENT_ID
+        sync: false
+      - key: GOOGLE_CLIENT_SECRET
+        sync: false
+      - key: GOOGLE_CLOUD_PROJECT_ID
+        value: pacific-droplet-477103-g4
+      - key: GOOGLE_CLOUD_LOCATION
+        value: us-central1
+      - key: FRONTEND_URL
+        value: https://bill-ai-42w.pages.dev
+      - key: SESSION_SECRET
+        generateValue: true
+      - key: PORT
+        value: 10000
+      - key: REDIRECT_URI
+        sync: false
+      - key: GOOGLE_APPLICATION_CREDENTIALS_JSON
+        sync: false
